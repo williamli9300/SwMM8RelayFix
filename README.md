@@ -1,5 +1,9 @@
 # Swim Meet Manager 8.0 Relay Fix Script
-A simple executable script to fix the Relay Team Names bug introduced in Hy-Tek Swim Meet Manager 8.0 (for Quantum).
+#### by William Li | [https://github.com/williamli9300/SwMM8RelayFix](https://github.com/williamli9300/SwMM8RelayFix) | v1.0 release
+
+A simple executable script to fix the Relay Team Names bug introduced in Hy-Tek Swim Meet Manager 8.0. 
+
+Meant for use with SwissTiming Quantum timing system start lists.
 
 This is the successor of the Relay Removal workaround (now deprecated; found [here](https://github.com/williamli9300/quantum-removerelays)).
 
