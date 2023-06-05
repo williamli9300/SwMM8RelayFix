@@ -28,7 +28,7 @@ Recommended Relay Team Name format is `Team Abbr - A` or `Relay - A`, as `Short 
 ## Instructions <a name="installation"></a>
 - Download and unzip the release package.
 - Place `MM8RelayFix.exe` into the Quantum Data Set directory (i.e. into the folder containing `quantum.slx`)
-  - The script is designed to work **in the same directory as the start list file**. For example, if your QAQF Data Set is in `C:\Quantum\Race\` (or, in other words, if your start list file is at `C:\Quantum\Race1\quantum.slx`, the application should be found at `C:\Quantum\Race\removerelays.exe`. 
+  - The script is designed to work **in the same directory as the start list file**. For example, if your QAQF Data Set is in `C:\Quantum\Race\` (or, in other words, if your start list file is at `C:\Quantum\Race\quantum.slx`, the application should be found at `C:\Quantum\Race\removerelays.exe`. 
 - Simply double click the script to run. You may need to give the app permission to "Run Anyway".
 
 ## Changes from Relay Removal Tool <a name="changes"></a>
