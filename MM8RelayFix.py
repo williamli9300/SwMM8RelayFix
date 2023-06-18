@@ -5,7 +5,7 @@ def get_file(): # inputs: pulls './quantum.slx'; outputs: list "lines" of file s
         input("File \"quantum.slx\" does not exist! Please ensure that this executable \
 is in the same folder as the start list file.\nPlease press \"Enter\" to close this window.")
         sys.exit()
-    with open('./quantum_test.slx', 'r') as f:
+    with open('./quantum.slx', 'r') as f:
         lines = f.read().splitlines()
         f.close()
     print("opening \"./quantum.slx\"...")
@@ -16,14 +16,14 @@ def edit_relay_lines(l):
     isrelay = False
     teamname = ""
     for i in range(len(l)):
-        if l[i][0].isnumeric(): #                           # if currently on heat/event line
+        if l[i][0].isnumeric():
             if "relay" in (l[i]).lower():
                 isrelay = True
             else:
                 isrelay = False
         else:
             if isrelay == True:
-                current_line = l[i].split(";") #             # split heat/event line into list
+                current_line = l[i].split(";")
                 if str(current_line[3]) == "0":
                     teamname = str(current_line[6])
                     print("team name: ", teamname)
@@ -35,7 +35,7 @@ def edit_relay_lines(l):
     return l
 
 def write_file(l):
-    with open('./quantum_test.slx', 'w') as f:
+    with open('./quantum.slx', 'w') as f:
         f.writelines("\n".join(l))
     
 lines = get_file()
