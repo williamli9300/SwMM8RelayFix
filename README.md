@@ -1,5 +1,5 @@
 # Swim Meet Manager 8.0 Relay Fix Script
-#### by William Li | [https://github.com/williamli9300/SwMM8RelayFix](https://github.com/williamli9300/SwMM8RelayFix) | v1.0 release
+#### by William Li | [https://github.com/williamli9300/SwMM8RelayFix](https://github.com/williamli9300/SwMM8RelayFix) | v1.1 release
 
 A simple executable script to fix the Relay Team Names bug introduced in Hy-Tek Swim Meet Manager 8.0. 
 
