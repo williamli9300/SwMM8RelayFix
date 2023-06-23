@@ -31,7 +31,6 @@ def edit_relay_lines(l):
                     if str(current_line[4]) != "":
                         current_line[6] = teamname
                         l[i] = ";".join(current_line)
-    l.append("\n")
     return l
 
 def write_file(l):
