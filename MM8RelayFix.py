@@ -2,8 +2,12 @@ import os
 
 def get_file(): # inputs: pulls './quantum.slx'; outputs: list "lines" of file split by line into list.
     if os.path.isfile('./quantum.slx') == False:
-        input("File \"quantum.slx\" does not exist! Please ensure that this executable \
-is in the same folder as the start list file.\nPlease press \"Enter\" to close this window.")
+        input("file \"quantum.slx\" does not exist! please ensure that this executable \
+is in the same folder as the start list file.\npress <Enter> to close this window.")
+        sys.exit()
+    check = os.stat('./quantum.slx').st_size
+    if check < 10:
+        input("file \"quantum.slx\" exists but is empty or has invalid data! please regenerate the file, then try again. \npress <Enter> to close this window.")
         sys.exit()
     with open('./quantum.slx', 'r') as f:
         lines = f.read().splitlines()
