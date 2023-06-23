@@ -43,6 +43,7 @@ Recommended Relay Team Name format is `Team Abbr - A` or `Relay - A`, as the `Sh
   - (This means a 98% smaller filesize and more efficient software!)
   - Fixed minor issue in Python script that would add a new line to end of start list.
   - Python script kept in release for systems with Python preinstalled.
+  - New C++ script updated to catch more exceptions.
   - `*.exe` executable now signed with trusted certificate.
   - Changes to license file.
   - Renamed executable `MM8RelayFix2.exe`
