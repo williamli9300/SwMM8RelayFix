@@ -1,6 +1,6 @@
 # Swim Meet Manager 8.0 Relay Fix Script
 
-#### by William Li | [https://github.com/williamli9300/SwMM8RelayFix](https://github.com/williamli9300/SwMM8RelayFix) | v2.0 release
+#### by William Li | [https://github.com/williamli9300/SwMM8RelayFix](https://github.com/williamli9300/SwMM8RelayFix) | v2.1 release
 
 A simple executable script to fix the Relay Team Names bug introduced in Hy-Tek Swim Meet Manager 8.0. 
 
@@ -38,9 +38,12 @@ Recommended Relay Team Name format is `Team Abbr - A` or `Relay - A`, as the `Sh
 
 ## Changelog <a name="changelog"></a>
 
+- v2.1
+  - Includes c++ runtime libraries built in for devices without VC++ Redist or Runtime installed.
+  - Minor application metadata changes.
 - v2.0
   - Python script translated to C++ for native deployment.
-  - (This means a 99% smaller filesize and more efficient software!)
+  - (This means a 96% smaller filesize and more efficient software!)
   - Fixed minor issue in Python script that would add a new line to end of start list.
   - Python script kept in release for systems with Python preinstalled.
   - New C++ script updated to catch more exceptions.
