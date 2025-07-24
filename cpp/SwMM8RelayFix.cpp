@@ -27,11 +27,12 @@ int main(void) {
 		std::string oldText = join(lines, '\n');
 		oldText.push_back('\n');
 		int writeOld = writeFile(oldText, oldName);
-		std::cout << "Original " << inputName << " Start List file written to " << oldName << ". \n";
+		std::cout << "Original " << inputName << " Start List file written to " << oldName << ". \n\n";
 		std::string newText = editList(lines);
 		int writeNew = writeFile(newText, outputName);
-		std::cout << "New " << inputName << " Start List file written to " << outputName << ". \n";
-		std::cout << "Done. File cleanup and special character scrubbing completed successfully.\n";
+		std::cout << "New " << inputName << " Start List file written to " << outputName << ". \n\n";
+		//std::cout << "Done. File cleanup and special character scrubbing completed successfully.\n\n";
+		std::cout << "Done. File cleanup completed successfully.\n\n";
 		system("pause");
 		return 0;
 	}
@@ -40,18 +41,18 @@ int main(void) {
 // check file exists : returns 1 for true, 0 for error
 int checkExists(std::string filename) {
 	if (!std::filesystem::exists(filename)) { // if file does not exist
-		std::cout << "ERROR: File \"" << filename << "\" does not exist! \n Please ensure this executable is in the same folder as the file (" << filename << ") file.\n";
+		std::cout << "ERROR: File \"" << filename << "\" does not exist! \n Please ensure this executable is in the same folder as the file (" << filename << ") file.\n\n";
 		return 0;
 	}
 	else { // if file exists
 		std::ifstream inputFile(filename);
 		inputFile.peek();
 		if (inputFile.eof()) { // if file exists but is empty
-			std::cout << "ERROR: File \"" << filename << "\" exists, but is empty or has invalid data. Please regenerate the file, then try again.\n";
+			std::cout << "ERROR: File \"" << filename << "\" exists, but is empty or has invalid data. Please regenerate the file, then try again.\n\n";
 			return 0;
 		}
 		else { // if file exists and is not empty
-			std::cout << "File " << filename << " found! Proceeding to process file.\n";
+			std::cout << "File " << filename << " found! Proceeding to process file.\n\n";
 			return 1;
 		}
 	}
@@ -71,7 +72,7 @@ std::vector<std::string> getFile(std::string filename) {
 
 // process lines of file : returns new startlist file as string with each line separated by \n
 std::string editList(std::vector<std::string> startlist) {
-	std::cout << "Processing...\n";
+	std::cout << "Processing...\n\n";
 	bool isRelay = false;
 	std::string currentEventNum;
 	std::string currentEventName;
@@ -85,7 +86,7 @@ std::string editList(std::vector<std::string> startlist) {
 	std::string currentName;
 
 	for (int i = 0; i < startlist.size(); i++) { // iterate through each line of startlist
-		std::string temp;
+		//std::string temp;
 		//temp = checkASCII(startlist[i]);
 		//startlist[i] = temp;
 		char firstChar = startlist[i][0];
@@ -123,7 +124,7 @@ std::string editList(std::vector<std::string> startlist) {
 						std::cout.width(20); std::cout << std::left << currentName;
 						std::cout.width(8); std::cout << std::left << teamName;
 						std::cout.width(12); std::cout << relayName;
-						std::cout << " - " << currentLine[6] << " changed to " << teamName << "\n";
+						std::cout << " > \"" << currentLine[6] << "\" changed to \"" << teamName << "\"\n";
 						currentLine[6] = teamName;
 						std::string joined = join(currentLine, ';');
 						startlist[i] = joined;
@@ -134,7 +135,7 @@ std::string editList(std::vector<std::string> startlist) {
 	}
 	std::string newList = join(startlist, '\n');
 	newList.push_back('\n');
-	std::cout << "File processing complete. \n";
+	std::cout << "\nFile processing complete. \n\n";
 	return newList;
 }
 
@@ -208,7 +209,7 @@ std::string checkASCII(std::string inputLine) {
 	int inASCIIRange = checkWithinASCIIRange(inputLine);
 	if (inASCIIRange == 0) {
 		processedLine = processLine(inputLine);
-		std::cout << inputLine << " changed to \n" << processedLine << "\n";
+		std::cout << "        Original Line \"" << inputLine << "\"\nchanged to \nASCII Compatible Line \"" << processedLine << "\"\n";
 		return processedLine;
 	}
 	else {
