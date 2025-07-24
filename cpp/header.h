@@ -1,4 +1,5 @@
 #pragma once
+
 int checkExists(std::string filename);
 std::vector<std::string> getFile(std::string filename);
 std::string editList(std::vector<std::string> startlist);
