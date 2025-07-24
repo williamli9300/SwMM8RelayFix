@@ -6,7 +6,8 @@ A simple executable script to fix the Relay Team Names issue introduced in Hy-Te
 
 **New in Version 3:** An version is included to simultaneously remove special characters (e.g. accents) to ensure compatibility with scoreboards that cannot display special characters.
 
-Intended for use with SwissTiming Quantum-AQ Network File Sharing Start Lists (`quantum.slx`). A sample start list (mock-up names) is provided for testing.
+Intended for use with SwissTiming Quantum-AQ Network File Sharing Start Lists (`quantum.slx`). 
+A sample start list (mock-up names) is provided in this repository for testing (includes accented names and relays).
 
 This is the successor of the Relay Removal workaround (now deprecated; found [here](https://github.com/williamli9300/quantum-removerelays)).
 
